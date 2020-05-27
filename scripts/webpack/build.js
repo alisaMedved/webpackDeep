@@ -21,11 +21,13 @@ compiler.run((error, stats) => {
     }
     console.log(chalk.greenBright('Build complited'));
 
+
     const info = stats.toString({
         hash: true,
         // modules: false
     });
 
+    console.log(info);
     if (stats.hasErrors()) {
         // ошибка во время компиляции (битый импорт и тд)
         console.log(chalk.redBright('---> Error!'));
