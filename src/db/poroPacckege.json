@@ -1,0 +1,26 @@
+{
+    "name": "webpackdeep",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+    "build": "webpack --env=test",
+        "serve": "serve ./dist" // serve удобна чтобы html понимал что вебпак/прогер поменял и не надо открывать новый html в dist
+},
+    "repository": {
+    "type": "git",
+        "url": "git+https://github.com/alisaMedved/webpackDeep.git"
+},
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+    "url": "https://github.com/alisaMedved/webpackDeep/issues"
+},
+    "homepage": "https://github.com/alisaMedved/webpackDeep#readme",
+    "devDependencies": {
+    "html-webpack-plugin": "^4.2.0",
+        "serve": "^11.3.0",
+        "webpack": "^4.42.1",
+        "webpack-cli": "^3.3.11"
+}
+}
