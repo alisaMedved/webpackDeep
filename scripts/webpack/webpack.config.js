@@ -9,10 +9,7 @@ const {
 } = require("./constants");
 
 module.exports = {
-    entry: {
-      path: SOURCE_DIRECTORY,
-      filename: 'index.js'
-    },
+    entry: SOURCE_DIRECTORY,
     output: {
       path: BUILD_DIRECTORY,
         filename: 'build.js'
@@ -25,6 +22,9 @@ module.exports = {
         template: "./static/template.html",
         favicon: "./static/favicon.ico",
       }),
-      new CleanWebpackPlugin(),
+      new CleanWebpackPlugin({
+          cleanOnceBeforeBuildPatterns: BUILD_DIRECTORY,
+          verbose: true,
+      }),
     ],
   };
