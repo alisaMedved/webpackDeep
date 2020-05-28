@@ -39,3 +39,16 @@ compiler.run((error, stats) => {
         console.warn(info);
     }
 });
+
+// вот метод run запускается единовременно - все скомпилит и выйдет
+// а вот метод watch не выходит из процесса и смотрит есть ли изменения и перекомпиливает все
+
+
+// мы вклиниваемся в событие жизненного цикла beforeRun синхронной функцией, для ассинхронной tapAsync
+compiler.hooks.beforeRun.tap({name: 'start'}, () => {
+    console.log(chalk.yellowBright('compilation started'));
+});
+
+compiler.hooks.done.tap({name: 'done'}, () => {
+    console.log(chalk.yellowBright('compilation completed'));
+});
