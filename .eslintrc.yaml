@@ -1,0 +1,10 @@
+{
+  "extends": ["env"],
+  "plugins": ["react"],
+  "parserOptions": {
+    "ecmaVersion": 2020,
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  }
+}

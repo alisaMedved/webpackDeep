@@ -3,12 +3,12 @@ const webpack = require('webpack');
 const chalk = require('chalk');
 
 // Config
-const config = require('./webpack.config.js');
+const getProdConfig = require('./config/webpack.prod.js');
 
 console.log('---> ', chalk.bgRed.green('START!'));
 
 // compiler
-const compiler = webpack(config);
+const compiler = webpack(getProdConfig());
 
 compiler.run((error, stats) => {
     if (error) {
